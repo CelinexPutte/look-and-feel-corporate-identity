@@ -1,0 +1,460 @@
+@font-face {
+  font-family: "Rajhandi";
+  src: url("../assets/fonts/Rajdhani-SemiBold.ttf") format("ttf"),
+    url("../assets/fonts/Rajdhani-SemiBold.woff") format("woff");
+    font-weight: 600;
+}
+
+@font-face {
+  font-family: "Rajhandi";
+  src: url("../assets/fonts/Rajdhani-Bold.ttf") format("ttf"),
+    url("../assets/fonts/Rajdhani-Bold.woff") format("woff");
+    font-weight: 700;
+}
+
+@font-face {
+  font-family: "Rajhandi";
+  src: url("../assets/fonts/Rajdhani-Regular.ttf") format("ttf"),
+    url("../assets/fonts/Rajdhani-Regular.woff") format("woff");
+    font-weight: 400;
+}
+
+:root {
+  --primary-color-1: #110f2a;
+  --primary-color-2: #524dd0;
+  --accent-color: #00ffec;
+  --accent-color-2: #42c0b1;
+  --accent-color-3: #2c8076;
+  --gray-color: #f7f7f7;
+  --black-color: #000;
+  --white-color: #fff;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Rajhandi, sans-serif;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+body {
+  height: 100vh
+}
+
+:focus {
+  outline: 2px solid var(--accent-color);
+  border-radius: 0.2rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+/* Header met logo en menu */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2em;
+  height: 5.25em;
+  width: 100%;
+  background: var(--primary-color-2);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  position: fixed;
+  z-index: 3;
+}
+
+.logo-top {
+  display: flex;
+  justify-content: flex-start;
+  height: 3rem;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 2em;
+}
+
+.menu-tabs {
+  list-style: none;
+}
+
+.menu-button {
+  border: none;
+  color: var(--white-color);
+  background-color: var(--primary-color-2);
+  font-size: 1em;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.menu-button:hover {
+  color: var(--accent-color);
+}
+
+
+.hamburger-menu, .hamburger-line {
+  display: none;
+}
+
+/* Section met kaart */
+
+section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+section::before {
+  content: '';
+  background-color:rgb(82, 77, 208, 1);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+h1 {
+  font-size: 5em;
+  color: var(--white-color);
+  position: relative;
+  z-index: 1;
+  align-self: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5.25rem;
+  text-align: center;
+  padding: 1rem;
+  line-height: 1;
+}
+
+.bg-img {
+  width: 100vw;
+  height: auto;
+  overflow: hidden;
+  opacity: 0.28;
+  position: absolute;
+}
+
+/* Articles*/
+
+article {
+  height: 19.625em;
+  width: 100%;
+  padding: 2rem;
+}
+
+article:nth-child(even) {
+  background-color: var(--white-color);
+  color: var(--black-color);
+}
+
+article:nth-child(odd) {
+  background-color: var(--primary-color-2);
+  color: var(--white-color);
+}
+
+article:first-of-type {
+  height: 39rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+  flex-wrap: wrap;
+}
+
+article:first-of-type img {
+  height: 30rem;
+  width: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  align-self: center;
+}
+
+article:first-of-type h2 {
+  width: 100%;
+  margin: 0 0 2rem 0;
+  padding: 0;
+  height: auto;
+}
+
+article:first-of-type p {
+  max-width: 25rem;
+  width: 25rem;
+  margin: 0;
+  font-size: 1.5em;
+}
+
+h2 {
+  font-size: 2.2em;
+  display: block;
+  line-height: 1;
+}
+
+.citymap {
+  height: 12em;
+  border: var(--accent-color-2) solid 5px;
+  border-radius: 1rem;
+  grid-area: 1/1/2/2;
+}
+
+.map-pin {
+  height: 12em;
+  margin-left: auto;
+  grid-area: 1/4/2/5;
+}
+
+.info-city {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin-top: 1rem;
+}
+
+.info-zone {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+
+.adres-1 {
+  grid-area: 1/2/2/3;
+  margin-right: 3rem;
+  margin-left: auto;
+}
+
+.adres-2 {
+  grid-area: 1/3/2/4;
+  margin-left: 3rem;
+  margin-right: auto;
+}
+
+h3 {
+  font-size: 1.5em;
+  font-weight: 600;
+}
+
+p {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.link-even {
+  color: var(--white-color);
+  width: max-content;
+  font-weight: 600;
+}
+
+.link-odd {
+  color: var(--white-color);
+  width: max-content;
+  font-weight: 600;
+  color: var(--black-color);
+  width: max-content;
+  font-weight: 600;
+}
+
+/* Footer */
+
+footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 3rem;
+  height: 10rem;
+  background-color: var(--primary-color-1);
+  color: var(--white-color);
+  padding: 1rem 2rem;
+}
+
+.logo-bottom {
+  display: flex;
+  align-self: start;
+  height: 4rem;
+  width: auto;
+}
+
+p.links-site {
+  display: flex;
+  gap: 2rem;
+  grid-area: 1/3/2/4;
+  margin-right: 0;
+  margin-left: auto;
+  font-weight: 600;
+}
+
+a.links-site {
+  color: var(--black-color);
+  text-decoration: none;
+  background-color: var(--accent-color-2);
+  border: solid var(--black-color) 2px;
+  border-radius: 0.5rem;
+  height: 3rem;
+  width: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: 0.4s;
+}
+
+a.links-site:hover {
+  background-color: var(--accent-color);
+}
+
+.rights {
+  display: block;
+  text-align: center;
+  margin-bottom: 0;
+  margin-top: auto;
+  margin-left: auto;
+  margin-right: auto;
+  grid-area: 2/1/3/4;
+  font-family: var(--font-rajhandi);
+}
+
+.rights-links {
+  color: var(--white-color);
+}
+
+/* Breakpoint op 750px max width voor mobiel*/
+
+@media screen and (max-width: 750px) {
+  .menu {
+    display: none;
+  }
+
+  .hamburger-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 16px;
+    width: 3rem;
+    height: 3rem;
+    background-color: var(--accent-color-2);
+    border: 0 solid var(--accent-color-2);
+    border-radius: 0.5rem;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    transition: 0.4s;
+  }
+  
+  .hamburger-menu:hover {
+    background-color: var(--accent-color);
+    cursor: pointer;
+  }
+
+  .hamburger-line {
+    display: block;
+    width: 24px;
+    min-height: 2px;
+    background-color: var(--black-color);
+  }
+  
+  .bg-img {
+    object-fit: cover;
+    height: 100%;
+  }
+
+  article {
+    height: fit-content;
+    padding: 2rem;
+  }
+
+  article h2 {
+    text-align: center;
+  }
+
+  .info-city {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+  .citymap {
+    height: auto;
+    width: 12em;
+  }
+
+  .info-zone {
+    display: flex;
+    align-items: center;
+    margin: 0;
+  }
+
+  .adres-1, .adres-2 {
+    width: 12rem;
+    margin: 0;
+  }
+
+  .map-pin {
+    margin: 0;
+    width: 12em;
+    height: auto;
+  }
+}
+
+/* Breakpoint op 1070px max width ivm foto*/
+@media screen and (max-width: 1070px) {
+ .bg-img {
+    object-fit: cover;
+    height: 100%;
+  }
+}
+
+  /* Breakpoint op 400px max width */
+
+@media screen and (max-width: 400px) {
+  footer {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+  }
+
+  .logo-bottom {
+    margin: 0 auto;
+  }
+
+  p.links-site {
+    margin: 1rem auto;
+  }
+}
+
+/* Breakpoint op 917px max width ivm informatie article*/
+
+@media screen and (max-width: 917px) {
+  article:first-of-type {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    height: fit-content;
+    padding: 2rem;
+  }
+
+  article:first-of-type h2 {
+    text-align: center;
+  }
+
+  article:first-of-type p {
+    max-width: 30rem;
+    width: auto;
+  }
+
+  article:first-of-type img {
+    width: 100%;
+    max-width: 30rem;
+    height: auto;
+    margin-bottom: 0;
+    margin-top: 2rem;
+  }
+}
