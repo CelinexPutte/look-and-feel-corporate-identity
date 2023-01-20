@@ -289,9 +289,9 @@ p.links-site {
 a.links-site {
   color: var(--black-color);
   text-decoration: none;
-  background-color: var(--accent-color-2);
-  border: solid var(--black-color) 2px;
-  border-radius: 0.5rem;
+  background-color: var(--accent-color);
+  border: none;
+  border-radius: 5px;
   height: 3rem;
   width: 5rem;
   display: flex;
@@ -302,7 +302,8 @@ a.links-site {
 }
 
 a.links-site:hover {
-  background-color: var(--accent-color);
+  background-color: var(--white-color);
+  color: var(--primary-color-2);
 }
 
 .rights {
@@ -336,15 +337,14 @@ a.links-site:hover {
     padding: 16px;
     width: 3rem;
     height: 3rem;
-    background-color: var(--accent-color-2);
-    border: 0 solid var(--accent-color-2);
+    background-color: var(--accent-color);
+    border: none;
     border-radius: 0.5rem;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
     transition: 0.4s;
   }
   
   .hamburger-menu:hover {
-    background-color: var(--accent-color);
+    background-color: var(--white-color);
     cursor: pointer;
   }
 
@@ -420,11 +420,11 @@ a.links-site:hover {
   }
 
   .logo-bottom {
-    margin: 0 auto;
+    margin: 0 auto 1.5rem;
   }
 
   p.links-site {
-    margin: 1rem auto;
+    display: none;
   }
 }
 
